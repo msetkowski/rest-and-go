@@ -7,7 +7,7 @@ FROM golang:1.12
 LABEL maintainer="Maciej Setkowski <maciej.setkowski@gmail.com>"
 
 # Set the Current Working Directory inside the container
-WORKDIR $GOPATH/src/rest-api
+WORKDIR $GOPATH/src/rest-and-go
 
 # Copy everything from the current directory to the PWD(Present Working Directory) inside the container
 COPY . .
@@ -23,4 +23,4 @@ RUN go install -v ./...
 EXPOSE 8080
 
 # Run the executable
-CMD ["rest-api"]
+CMD ["rest-and-go"]

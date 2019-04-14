@@ -18,15 +18,22 @@ Might require installation of dependency management tool __dep__
 ----
 dep init
 go build
-./rest-api
+./rest-and-go
+----
+
+The binary fle name can be modified 
+
+[source,bash]
+----
+go build -o server
 ----
 
 == Docker image
 
 [source,bash]
 ----
-docker build -t rest-api .
-docker run -d -p 8080:8080 rest-api
+docker build -t rest-and-go .
+docker run -d -p 8080:8080 rest-and-go
 ----
 
 = Testing
