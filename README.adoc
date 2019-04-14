@@ -1,0 +1,35 @@
+= Intro
+
+My first experiment with REST API implementation using GO.
+
+* https://www.codementor.io/codehakase/building-a-restful-api-with-golang-a6yivzqdo
+* https://www.callicoder.com/docker-golang-image-container-example/
+
+
+= Building
+
+
+
+== Standalone build
+
+Might require installation of dependency management tool __dep__
+
+[source,bash]
+----
+dep init
+go build
+./rest-api
+----
+
+== Docker image
+
+[source,bash]
+----
+docker build -t rest-api .
+docker run -d -p 8080:8080 rest-api
+----
+
+= Testing
+
+
+http://localhost:8080/people
